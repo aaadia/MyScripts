@@ -31,45 +31,52 @@
 # ----- ex 3.1, ex 3.2 -------
 # ----- ex 4.6 ---------------
 
-def computepay (h, r):  #this is my function
-    if h > 0 and r > 0:
-            if h < 40:
-                tr = h * r
-            else:
-                tr = (h - 40) * r * 1.5 + 40 * r
-            return tr
-    else: print ('Hours and rate must be positive!') 
-    
-
-h = input ('Enter Hours: ') #this is start
-try:
-    h = float (h)
-    r = input ('Enter Rate: ')
-    try:       
-        r = float (r)
-        totalpay = computepay (h, r) #function call
-        print ('Total pay: ', totalpay)      
-    except:
-        print ('ERROR! Enter numbers!')
-except:
-        print ('ERROR! Enter numbers!')
-
+##def computepay (h, r):  #this is my function
+##    if h > 0 and r > 0:
+##            if h < 40:
+##                tr = h * r
+##            else:
+##                tr = (h - 40) * r * 1.5 + 40 * r
+##            return tr
+##    else: print ('Hours and rate must be positive!') 
+##    
+##
+##h = input ('Enter Hours: ') #this is start
+##try:
+##    h = float (h)
+##    r = input ('Enter Rate: ')
+##    try:       
+##        r = float (r)
+##        totalpay = computepay (h, r) #function call
+##        print ('Total pay: ', totalpay)      
+##    except:
+##        print ('ERROR! Enter numbers!')
+##except:
+##        print ('ERROR! Enter numbers!')
+##
 
 # ----- ex 3.3 -------
+# ----- ex 4.7 -------
 
-##a = input ('Input score: ')
-##try:
-##    a = float (a)
-##    if a <= 1 and a >= 0:
-##        if a < 0.6: print ('F')
-##        elif a < 0.7: print ('D')
-##        elif a < 0.8: print ('C')
-##        elif a < 0.9: print ('B')
-##        else: print ('A')
-##    else: print ('Bad score')
-##except:
-##    print ('Bad score')
-##
+
+def computegrade (a):
+    a = float (a)
+    if a <= 1 and a >= 0:
+        if a < 0.6: pr = 'F'
+        elif a < 0.7: pr = 'D'
+        elif a < 0.8: pr = 'C'
+        elif a < 0.9: pr = 'B'
+        else: pr = 'A'
+    else: pr = 'Bad score'
+    return pr
+
+x = input ('Input score: ')
+try:
+    toprint = computegrade (x)
+    print (toprint)
+except:
+    print ('Bad score')
+
 
 
 
